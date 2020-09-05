@@ -10,3 +10,24 @@ curl -sLS https://get.k3s.io | INSTALL_K3S_EXEC="server –tls-san "ServerIP" �
 
 #### Client
 curl -sfL https://get.k3s.io | K3S_URL=https://ServerIP:6443 K3S_TOKEN=$TOKEN sh –
+
+#### Helm 3
+curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash </br>
+kubectl create serviceaccount tiller --namespace kube-system </br>
+kubectl create -f tiller-clusterrolebinding.yaml
+
+<pre><code>
+#tiller-clusterrolebinding.yaml
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1beta1
+metadata:
+  name: tiller-clusterrolebinding
+subjects:
+- kind: ServiceAccount
+  name: tiller
+  namespace: kube-system
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: ""
+</pre></code>  
