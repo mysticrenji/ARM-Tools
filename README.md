@@ -36,3 +36,5 @@ roleRef:
 #### Install K3s with docker as container runtime </br>
 curl -sfL https://get.k3s.io | sh -s - --docker
 
+#### Install K3d </br>
+curl -s https://raw.githubusercontent.com/rancher/k3d/main/install.sh | bash
