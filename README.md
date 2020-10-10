@@ -1,6 +1,10 @@
 # ARM-Tools
 Code Snippets for ARM devices
 
+### Enable Cgroup </br>
+cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory
+
+
 ### Docker Install </br>
 curl -sSL https://get.docker.com/ | sh </br>
 curl https://releases.rancher.com/install-docker/19.03.sh | sh
