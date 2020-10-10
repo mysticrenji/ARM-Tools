@@ -2,6 +2,7 @@
 Code Snippets for ARM devices
 
 ### Enable Cgroup </br>
+Edit /boot/cmdline.txt and add the following to the end of the line: </br>
 cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory
 
 
