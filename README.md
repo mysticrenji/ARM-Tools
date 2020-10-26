@@ -46,3 +46,6 @@ curl -sfL https://get.k3s.io | sh -s - --docker
 
 #### Install K3d </br>
 curl -s https://raw.githubusercontent.com/rancher/k3d/main/install.sh | bash
+
+#### Install Rust </br>
+curl https://sh.rustup.rs -sSf | sh
