@@ -49,3 +49,9 @@ curl -s https://raw.githubusercontent.com/rancher/k3d/main/install.sh | bash
 
 #### Install Rust </br>
 curl https://sh.rustup.rs -sSf | sh
+
+#### Install Azure CLI </br>
+curl -L https://aka.ms/InstallAzureCli >> installAzureCli.sh </br>
+curl https://azurecliprod.blob.core.windows.net/install.py >> installAzureCliPython.py </br>
+sudo chmod +x installAzureCliPython.py </br>
+python3 installAzureCliPython.py </br>
