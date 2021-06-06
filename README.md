@@ -22,7 +22,7 @@ curl -sfL https://get.k3s.io | K3S_URL=https://ServerIP:6443 K3S_TOKEN=$TOKEN sh
 
 ### K3s with Calico </br>
 #### Master </br>
-curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="server --tls-san $(curl ifconfig.me) --flannel-backend=none --disable-network-policy --no-deploy traefik --write-kubeconfig-mode 644 --cluster-cidr=192.168.0.0/16" sh - >/br>
+curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="server --tls-san $(curl ifconfig.me) --flannel-backend=none --disable-network-policy --no-deploy traefik --write-kubeconfig-mode 644 --cluster-cidr=192.168.0.0/16" sh - </br>
 
 #### Slave </br>
 curl -sfL https://get.k3s.io | K3S_URL=https://172.10.1.4:6443 K3S_TOKEN=K1060791485294d1599bfc0f772d042db426defd5515bb5eb8a8b556cb65f4252df::server:34d6efcb247a5027384edd1624e723fa sh - </br>
